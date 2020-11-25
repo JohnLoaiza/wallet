@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.leyan95:android-zxingLibrary:0.1.1-PRE@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20351acdf0ca0029d13b0331bb5770c4/android-zxingLibrary-0.1.1-PRE/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20351acdf0ca0029d13b0331bb5770c4/android-zxingLibrary-0.1.1-PRE/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20351acdf0ca0029d13b0331bb5770c4/android-zxingLibrary-0.1.1-PRE/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20351acdf0ca0029d13b0331bb5770c4/android-zxingLibrary-0.1.1-PRE/jars/libs/core_3.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.leyan95/android-zxingLibrary/0.1.1-PRE/281bcba9b18bb74b3daf36bc535ce83bb50c35e2/android-zxingLibrary-0.1.1-PRE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

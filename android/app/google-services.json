@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "829008414934",
+    "firebase_url": "https://fcm-carrito.firebaseio.com",
+    "project_id": "fcm-carrito",
+    "storage_bucket": "fcm-carrito.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829008414934:android:24d5b0fba6dbef6f9d6177",
+        "android_client_info": {
+          "package_name": "net.citica.smart_wallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829008414934-ha52dhtu135vrj7n42oqi2o9ldfvmccv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.citica.smart_wallet",
+            "certificate_hash": "bd8f0f47017445181dd66ccfdbb40826917e6a92"
+          }
+        },
+        {
+          "client_id": "829008414934-daerl5b2kt83at8qo3h0dcjubkoanbd3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.citica.smart_wallet",
+            "certificate_hash": "b5115d247d1447647bcf7d1c7de8370383a7f926"
+          }
+        },
+        {
+          "client_id": "829008414934-2q04ssddk4ph20j443oohqdoa3ihg2qa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXt4a44x7-UqfitJsYqD3iz0Oz1cA6PL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829008414934-2q04ssddk4ph20j443oohqdoa3ihg2qa.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "829008414934-16r2kgg6hmnoi7bhp7g96a1bcvmh4k4m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "net.citica.carrito"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
