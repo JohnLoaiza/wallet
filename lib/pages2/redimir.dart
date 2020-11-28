@@ -59,14 +59,20 @@ class Redimir extends StatelessWidget {
 
                     child:
                     TextFormField(
+                      style: TextStyle(color: Colors.white),
 
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.left,
                         validator: (valor) =>
                         valor.length < 0 ? 'El codigo no exite' : null,
                         onSaved: (valor) => _email = valor,
                         decoration: InputDecoration(
 
-                          labelText: 'Cupon',
+                        //  labelText: 'Cupon',
+                          hintText: "Cupon",
+                          hintStyle: TextStyle(
+                            color: Color(0xffaab3d0),
+
+                          ),
                           alignLabelWithHint: true,
                           labelStyle: TextStyle(
                             color: Color(0xffaab3d0),

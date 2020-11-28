@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
@@ -14,6 +15,8 @@ import 'package:pybus_wallet/pages/dialogo_servicios_handler.dart';
 import 'package:pybus_wallet/pages/generateP.dart';
 
 import 'package:qrscan/qrscan.dart' as scanner;
+
+import 'main2.dart';
 
  List<Trans> transa;
 class ContactosPage extends StatefulWidget {
@@ -48,28 +51,56 @@ class _ContactosPageState extends State<ContactosPage> with ServiciosListener,Si
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      backgroundColor:         Color(0xFF278FB4),
+      backgroundColor:         Colors.white,
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context){
+            return IconButton(icon: Icon(Icons.arrow_back_ios_sharp, color: Color(0xff011c74),), onPressed: () {
+                Navigator.of(context).push(
+                 new CupertinoPageRoute(
+                    builder: (BuildContext context) =>
+                      new HomeApp()));
+            },);
+          },
+        ),
+        backgroundColor: Colors.white,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text("Mis Amigos"),
+        title: Text("Mis Amigos", style: TextStyle(color: Color(0xff011c74), fontFamily: 'Montserrat',),),
+     /*   actions: <Widget>[
+          Container(
+            margin: EdgeInsets.only(right: 20),
+              child: GestureDetector(
+            onTap: (){
+
+            },
+            child: Icon(Icons.search, color: Color(0xff011c74), size: 30,),
+          )
+          )
+        ], */
       ),
       body: new Container(
-        padding: EdgeInsets.only(left: 20.0),
+        padding: EdgeInsets.only(left: 20.0, right: 20),
         child:
         Column(
             children: <Widget>[
         Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(16.0),
         child: TextField(
           onChanged: (value) {
             filterSearchResults(value);
           },
           controller: editingController,
           decoration: InputDecoration(
-              labelText: "Search",
+
+            //  labelText: "Search",
               hintText: "Search",
-              prefixIcon: Icon(Icons.search),
+              suffixIcon: Icon(Icons.search, color: Color(0xff011c74), size: 30,),
+              hintStyle: TextStyle(
+                fontFamily: 'Montserrat',
+
+              ),
+
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(25.0)))),
         ),
@@ -80,7 +111,7 @@ class _ContactosPageState extends State<ContactosPage> with ServiciosListener,Si
               builder: (context, snapshot) {
                 return transa.length > 0? new TransList():
                 new Center(child:
-                new Text('Aun no has registrado ningun contacto,  Por favor haga Click en el boton + para comenzar!',
+                new Text('Aun no has registrado ningun contacto,  Por favor haga Click en el boton + para comenzar!', textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18,fontWeight: FontWeight.w300)));
               },
             )
@@ -95,6 +126,7 @@ class _ContactosPageState extends State<ContactosPage> with ServiciosListener,Si
             bottom: 80.0,
             right: 10.0,
             child: FloatingActionButton(
+              backgroundColor: Color(0xffd52f54),
               heroTag: 'Agregar',
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
@@ -103,24 +135,21 @@ class _ContactosPageState extends State<ContactosPage> with ServiciosListener,Si
                 // _navigateToAddScreen(context);
                 // What you want to do
               },
-              child: Icon(Icons.add),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
+              child: Icon(Icons.add, size: 40,),
+
             ),
           ),
           Positioned(
             bottom: 10.0,
             right: 10.0,
             child: FloatingActionButton(
+              backgroundColor: Color(0xffd52f54),
               heroTag: 'Escanear',
               onPressed: () {
                 _scan();
               },
-              child: Icon(Icons.settings_overscan),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
+              child: Icon(Icons.qr_code, size: 34,),
+
             ),
           ),
         ],

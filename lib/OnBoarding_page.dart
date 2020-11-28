@@ -8,7 +8,7 @@ class OnBoardingScreen extends StatelessWidget {
     return Scaffold(
       body: FancyOnBoarding(
         onSkipButtonPressed: () =>
-        Navigator.of(context).pushReplacementNamed('/home'),
+        Navigator.of(context).pushReplacementNamed('/mainPage'),
         pageList: onBoardingList,
 
         onDoneButtonPressed: () =>

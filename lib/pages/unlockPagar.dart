@@ -31,30 +31,106 @@ class UnlockScreenState extends State<UnlockScreen> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-        backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Text('Bloqueo de Seguridad'),
+        backgroundColor: Color(0xff7d7d7d),
+      body: Center(
 
-      ),
-      body: Container(
-        padding: EdgeInsets.only(top: 36.0),
+
         /*  decoration: BoxDecoration(
              color: Colors.white
           ) ,*/
-      child:
-          GestureView(
-            immediatelyClear: false,
-            size: MediaQuery.of(context).size.width,
-            onPanUp: (List<int> items) {
-              setState(() {
-                result = items;
-              });
-            },
-          ),
+      child: Container(
+        margin: EdgeInsets.only(top: 70, bottom: 70),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Color(0xff011c74),
+        ),
+
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              child: Text("PAYBUS", style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold, color: Colors.white, fontFamily: 'Montserrat', ),),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Color(0xff011c74),
+
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 20),
+              decoration: BoxDecoration(
+
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(5)
+              ),
+              child: Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 15,
+                  ),
+              Text("Ingrese su patrón de seguridad", style: TextStyle(color: Color(0xff707070), fontFamily: 'Montserrat',),),
+              GestureView(
+
+                lineWidth: 17,
+                ringWidth: 3,
+                circleRadius: 0,
+              selectColor: Color(0xffd52f54),
+              unSelectColor: Color(0xff011c74),
+              immediatelyClear: false,
+              size: MediaQuery.of(context).size.width,
+              onPanUp: (List<int> items) {
+                setState(() {
+                  result = items;
+                });
+              },
+            ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(5),
+                    height: 35,
+                    decoration: BoxDecoration(
+
+                        borderRadius: BorderRadius.circular(7)
+                    ),
+                    child: RaisedButton(
+
+                      onPressed: () {
+
+                      },
+                      color: Color(0xffd52f54),
+                      child: Container(
+                        padding: EdgeInsets.only(top: 9),
+                        decoration: BoxDecoration(
+                          color: Color(0xffd52f54),
+                        ),
+                        width: 204,
+                        height: 44,
+                        child: Text(
+                          "CANCELAR",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white, fontSize: 14),
+                        ),
+                      ),
+                      shape: new RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(7),
+                      ),
+                    ),
+                  ),
+  ]
+            )
+            )
+          ],
+        )
       )
 
 
 
+    )
     );
   }
 

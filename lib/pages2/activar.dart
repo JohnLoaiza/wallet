@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:pybus_wallet/pages/generate.dart';
+import 'package:pybus_wallet/pages/unlockPagar.dart';
 import 'package:pybus_wallet/pages2/comprar.dart';
 import 'package:pybus_wallet/pages2/recargar.dart';
 
@@ -133,8 +134,11 @@ class _HomeState extends State<Activar> {
                   child: RaisedButton(
                     color: Colors.white,
                     onPressed: () {
+                   //   Navigator.of(context).push(MaterialPageRoute(
+                    //      builder: (BuildContext context) => GenerateScreen()));
+
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => GenerateScreen()));
+                               builder: (BuildContext context) => UnlockScreen()));
                     },
                     child: Text("USAR", style: TextStyle(color: Color(0xffD40A54)),),
                   ),
